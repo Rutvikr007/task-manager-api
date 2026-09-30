@@ -15,11 +15,8 @@ This repository contains the completed 2-day take-home assignment for the Task M
 3. **New Feature Added:** Implemented the `PATCH /tasks/:id/assign` endpoint with input validation, reassignment support, and full test coverage.
 4. **Final Metrics:** 48 passing tests (0 failures) and **93.61% line coverage** (well above the 80% requirement).
 
-Detailed bug reports and resolution details are available in:
-- **`BUG_REPORT.md`** — Dedicated root-cause analysis and resolution status for all 3 bugs.
-
-
 ---
+
 
 ## Getting Started
 
@@ -83,8 +80,6 @@ Time:        ~2.8 s
 | **Bug 1: Status Filter Substring Match** | `taskService.js:9` | Used `.includes()` instead of strict equality. Searching for `"do"` returned both `"todo"` and `"done"` tasks. | Updated to `t.status === status`. |
 | **Bug 2: Pagination Off-By-One** *(Primary Day 2 Fix)* | `taskService.js:12` | Calculated offset as `page * limit`. Because query pages are 1-based, page 1 skipped items 0–9. | Updated to `(page - 1) * limit`. |
 | **Bug 3: Priority Overwrite on Complete** | `taskService.js:69` | Hardcoded `priority: 'medium'` upon completing a task, resetting high-priority tasks. | Removed `priority: 'medium'` to preserve existing priority. |
-
-*See [`BUG_REPORT.md`](./BUG_REPORT.md) for full discovery steps and stack details.*
 
 ---
 
