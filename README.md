@@ -15,9 +15,9 @@ This repository contains the completed 2-day take-home assignment for the Task M
 3. **New Feature Added:** Implemented the `PATCH /tasks/:id/assign` endpoint with input validation, reassignment support, and full test coverage.
 4. **Final Metrics:** 48 passing tests (0 failures) and **93.61% line coverage** (well above the 80% requirement).
 
-Detailed write-ups are available in:
-- **`document.docx`** — Complete walkthrough report with embedded terminal screenshots.
+Detailed bug reports and resolution details are available in:
 - **`BUG_REPORT.md`** — Dedicated root-cause analysis and resolution status for all 3 bugs.
+
 
 ---
 
